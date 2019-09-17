@@ -1,0 +1,214 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+* {
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+}
+
+.header {
+  text-align: center;
+  font-weight: 500;
+}
+
+.form-container {
+  margin: 40px 0;
+  width: 550px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 5px;
+  position: relative;
+  padding: 10px 20px 40px 20px;
+  box-sizing: border-box;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.form-container h3 {
+  text-align: center;
+
+  font-weight: 500;
+}
+
+form {
+  margin-top: 35px;
+}
+form label {
+  display: block;
+  text-align: center;
+  margin: 0 0 15px 0;
+}
+
+form input {
+  width: 90%;
+  margin: auto;
+  display: block;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  margin-bottom: 30px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  outline: none;
+}
+form button {
+  margin: auto;
+  display: block;
+  border: none;
+  color: white;
+  background: linear-gradient(90deg, #5100ffb2, #ea00ff8f);
+  padding: 7px 50px;
+  outline: none;
+  border-radius: 30px;
+  font-size: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.sites {
+  margin-top: 70px;
+  padding-bottom: 50px;
+}
+.sites h2 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.item {
+  width: 550px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  padding: 0 30px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 25px 0;
+}
+.item .title {
+  display: inline;
+  opacity: 0.8;
+}
+
+.item button {
+  border: none;
+  border-radius: 40px;
+  color: white;
+  padding: 5px 20px;
+  margin-left: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.visit {
+  background: linear-gradient(90deg, #5100ffb2, #ea00ff8f);
+}
+.delete {
+  background-color: rgba(255, 0, 0, 0.7);
+}
+.item a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Shining effect on buttons*/
+
+.shine {
+  overflow: hidden;
+  position: relative;
+}
+.shine::before {
+  content: "";
+  position: absolute;
+  height: 100px;
+  transform: translateY(-50%) skew(-20deg);
+  width: 15px;
+  background-color: rgba(255, 255, 255, 0.349);
+  left: 10%;
+  transition: all 0.4s ease;
+}
+
+@media (max-width: 600px) {
+  .form-container {
+    width: 100%;
+    border: none;
+    box-shadow: none;
+  }
+
+  .item {
+    width: 95%;
+    padding: 0 15px;
+  }
+  .item .title {
+    font-size: 15px;
+  }
+  .item button {
+    font-size: 0.7rem;
+    padding: 5px 14px;
+  }
+}
+@media (max-width: 425px) {
+  form input {
+    width: 100%;
+  }
+  .item {
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.backdrop {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  display: none;
+  z-index: 100;
+}
+
+.modal {
+  z-index: 200;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: white;
+  transform: translate(-50%, -100%);
+  padding: 10px 30px 20px 30px;
+  border-radius: 3px;
+  display: none;
+}
+.modal button {
+  border: none;
+  color: white;
+  background-color: rgba(255, 0, 0, 0.699);
+  padding: 5px 30px;
+  border-radius: 2px;
+  margin-top: 10px;
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+}
+
+.alert {
+  position: fixed;
+  bottom: 10%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 5px 10px;
+  left: -200%;
+  transition: all 0.7s;
+  border-radius: 2px;
+  font-size: 0.9rem;
+  transform: translateX(-50%);
+}
+
+.empty {
+  text-align: center;
+  opacity: 0.9;
+  margin: 80px 0 30px 0;
+  display: none;
+}
