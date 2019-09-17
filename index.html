@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>SiteMarker - A bookmark app</title>
+
+    <!--Adding CSS-->
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!--Adding JAVASCRIPT-->
+    <script src="./js/app.js"></script>
+
+    <!--Font-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--Font Awesome-->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    />
+  </head>
+  <body>
+    <h1 class="header">SiteMarker</h1>
+
+    <!--Form Section-->
+    <div class="form-container">
+      <h3>Bookmark your favourite sites.</h3>
+      <form>
+        <label>Enter Name</label>
+        <input type="text" placeholder="Name of Site..." id="name" />
+
+        <label>Enter URL</label>
+        <input type="text" placeholder="URL..." id="url" />
+
+        <button>BookMark <i class="far fa-bookmark"></i></button>
+      </form>
+    </div>
+
+    <!--Sites-->
+    <div class="sites">
+      <h2>Your Sites</h2>
+      <p class="empty">You haven't bookmark any site yet.</p>
+    </div>
+
+    <!--Modal-->
+    <div class="backdrop"></div>
+    <div class="modal">
+      <p class="message">Please fill all the fields</p>
+      <button class="modal-Btn">OK</button>
+    </div>
+
+    <!--Alert Box-->
+    <div class="alert">Site is added to bookmark</div>
+  </body>
+</html>
